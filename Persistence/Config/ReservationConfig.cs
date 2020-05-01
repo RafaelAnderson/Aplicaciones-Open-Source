@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace PointFood.Model
+namespace PointFood.Persistence.Config
 {
-    public class Prueba
+    public class ReservationConfig
     {
     }
 }

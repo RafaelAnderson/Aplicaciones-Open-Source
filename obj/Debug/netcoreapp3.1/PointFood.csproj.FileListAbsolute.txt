@@ -41,3 +41,14 @@ C:\Users\User\Desktop\CZ - PointFood\PointFood\bin\Debug\netcoreapp3.1\runtimes\
 C:\Users\User\Desktop\CZ - PointFood\PointFood\obj\Debug\netcoreapp3.1\PointFood.csproj.CopyComplete
 C:\Users\User\Desktop\CZ - PointFood\PointFood\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\User\Desktop\CZ - PointFood\PointFood\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Users\User\Desktop\CZ - PointFood\PointFood\bin\Debug\netcoreapp3.1\PointFood.deps.json
+C:\Users\User\Desktop\CZ - PointFood\PointFood\bin\Debug\netcoreapp3.1\PointFood.runtimeconfig.json
+C:\Users\User\Desktop\CZ - PointFood\PointFood\bin\Debug\netcoreapp3.1\PointFood.runtimeconfig.dev.json
+C:\Users\User\Desktop\CZ - PointFood\PointFood\bin\Debug\netcoreapp3.1\PointFood.dll
+C:\Users\User\Desktop\CZ - PointFood\PointFood\bin\Debug\netcoreapp3.1\PointFood.pdb
+C:\Users\User\Desktop\CZ - PointFood\PointFood\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\User\Desktop\CZ - PointFood\PointFood\obj\Debug\netcoreapp3.1\PointFood.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\CZ - PointFood\PointFood\obj\Debug\netcoreapp3.1\PointFood.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\User\Desktop\CZ - PointFood\PointFood\obj\Debug\netcoreapp3.1\PointFood.dll
+C:\Users\User\Desktop\CZ - PointFood\PointFood\obj\Debug\netcoreapp3.1\PointFood.pdb
+C:\Users\User\Desktop\CZ - PointFood\PointFood\obj\Debug\netcoreapp3.1\PointFood.genruntimeconfig.cache
