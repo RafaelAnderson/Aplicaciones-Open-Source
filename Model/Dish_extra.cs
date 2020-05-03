@@ -5,12 +5,13 @@ using System.Threading.Tasks;
 
 namespace PointFood.Model
 {
-    public class DishDetail
+    public class Dish_extra
     {
-        public int DishDetailId { get; set; }
+        public int Dish_extraId { get; set; }
 
-        public int OrderDetailId { get; set; }
-        public OrderDetail OrderDetail { get; set; }
+
+        public int DishId { get; set; }
+        public Dish Dish { get; set; }
 
         public int ExtraId { get; set; }
         public Extra Extra { get; set; }

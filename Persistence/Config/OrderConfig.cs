@@ -12,13 +12,6 @@ namespace PointFood.Persistence.Config
     {
         public OrderConfig(EntityTypeBuilder<Order> entityBuilder)
         {
-            entityBuilder.HasOne(x => x.Client)
-                .WithMany()
-                .HasForeignKey(x => x.ClientId);
-
-            entityBuilder.HasOne(x => x.Restaurant)
-                .WithMany()
-                .HasForeignKey(x => x.RestaurantId);
 
             entityBuilder.Property(x => x.RegisteredAt).IsRequired();
             entityBuilder.Property(x => x.DeliveredAt).IsRequired();

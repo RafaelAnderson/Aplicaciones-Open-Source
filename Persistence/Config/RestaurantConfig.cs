@@ -11,11 +11,8 @@ namespace PointFood.Persistence.Config
     {
         public RestaurantConfig(EntityTypeBuilder<Restaurant> entityBuilder)
         {
-            entityBuilder.Property(x => x.Name).IsRequired().HasMaxLength(50);
+            entityBuilder.Property(x => x.Name).IsRequired().HasMaxLength(30);
             entityBuilder.Property(x => x.Address).IsRequired().HasMaxLength(100);
-            entityBuilder.HasOne(x => x.RestaurantOwner)
-                .WithMany()
-                .HasForeignKey(x => x.RestauranteOwnerId);
         }
     }
 }

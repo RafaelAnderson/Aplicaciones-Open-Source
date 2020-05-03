@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using PointFood.Commons;
-using PointFood.Dto;
+//using PointFood.Dto;
 using PointFood.Model;
 using System;
 using System.Collections.Generic;
@@ -13,8 +13,8 @@ namespace PointFood.ConfigMapper
     {
         public AutoMapperConfig()
         {
-            CreateMap<Client, ClientDto>();
-            CreateMap<DataCollection<Client>, DataCollection<ClientDto>>();
+            //CreateMap<Client, ClientDto>();
+            //CreateMap<DataCollection<Client>, DataCollection<ClientDto>>();
         }
     }
 }

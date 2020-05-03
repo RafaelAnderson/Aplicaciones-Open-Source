@@ -8,17 +8,10 @@ using System.Threading.Tasks;
 
 namespace PointFood.Persistence.Config
 {
-    public class DishDetailConfig
+    public class Dish_extraConfig
     {
-        public DishDetailConfig(EntityTypeBuilder<DishDetail> entityBuilder)
+        public Dish_extraConfig(EntityTypeBuilder<Dish_extra> entityBuilder)
         {
-            entityBuilder.HasOne(x => x.OrderDetail)
-                .WithMany(x => x.Extras)
-                .HasForeignKey(x => x.OrderDetailId);
-
-            entityBuilder.HasOne(x => x.Extra)
-                .WithMany()
-                .HasForeignKey(x => x.ExtraId);
 
             entityBuilder.Property(x => x.Quantity).IsRequired();
             entityBuilder.Property(x => x.SubTotal).IsRequired().HasColumnType("decimal(5,2)");

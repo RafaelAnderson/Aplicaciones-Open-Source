@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace PointFood.Persistence.Config
 {
-    public class ExtraConfig
+    public class TableConfig
     {
-        public ExtraConfig(EntityTypeBuilder<Extra> entityBuilder)
+        public TableConfig(EntityTypeBuilder<Table>EntityBuilder)
         {
-            entityBuilder.Property(x => x.Name).IsRequired().HasMaxLength(20);
+            EntityBuilder.Property(X => X.avaliable).IsRequired();
         }
     }
 }

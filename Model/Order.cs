@@ -20,6 +20,8 @@ namespace PointFood.Model
         public int RestaurantId { get; set; }
         public Restaurant Restaurant { get; set; }
 
+        public Reservation Reservation { get; set; }
+
         public decimal Total { get; set; }
         public string State { get; set; }
     }

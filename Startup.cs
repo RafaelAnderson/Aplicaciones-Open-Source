@@ -29,7 +29,7 @@ namespace PointFood
         {
             services.AddControllers();
             services.AddDbContext<ApplicationDbContext>(
-                opts => opts.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"))
+                opts => opts.UseNpgsql(Configuration.GetConnectionString("DefaultConnection"))
                 );
             services.AddAutoMapper(typeof(Startup));
         }

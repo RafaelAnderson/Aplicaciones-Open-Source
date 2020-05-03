@@ -12,8 +12,8 @@ namespace PointFood.Persistence.Config
     {
         public DishConfig(EntityTypeBuilder<Dish> entityBuilder)
         {
-            entityBuilder.Property(x => x.Name).IsRequired().HasMaxLength(50);
-            entityBuilder.Property(x => x.Description).IsRequired().HasMaxLength(100);
+            entityBuilder.Property(x => x.Name).IsRequired().HasMaxLength(20);
+            entityBuilder.Property(x => x.Description).IsRequired().HasMaxLength(200);
             entityBuilder.Property(x => x.Price).IsRequired().HasColumnType("decimal(5,2)");
         }
     }
