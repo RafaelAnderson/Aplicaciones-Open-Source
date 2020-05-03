@@ -23,6 +23,5 @@ namespace PointFood.Dto
     {
         [Required]
         public int Name { get; set; }
-        public int Quantity { get; set; }
     }
 }

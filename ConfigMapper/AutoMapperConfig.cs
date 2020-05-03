@@ -32,6 +32,16 @@ namespace PointFood.ConfigMapper
             CreateMap<Client, ClientDto>();
             CreateMap<DataCollection<Client>, DataCollection<ClientDto>>();
             CreateMap<ClientCreateDto, Client>();
+
+            //Table
+            CreateMap<Table, TableDto>();
+            CreateMap<DataCollection<Table>, DataCollection<TableDto>>();
+            CreateMap<TableCreateDto, TableDto>();
+
+            //Dish
+            CreateMap<Dish, DishDto>();
+            CreateMap<DataCollection<Dish>, DataCollection<DishDto>>();
+            CreateMap<DishCreateDto, Dish>();
         }
     }
 }
