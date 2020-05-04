@@ -11,7 +11,11 @@ namespace PointFood.Dto
         public string Name { get; set; }
         public string Dni { get; set; }
         public string Email { get; set; }
-        public DateTime Birthday { get; set; }
+        public DateTime Birthdate { get; set; }
+        public DateTime SignedUpAt { get; set; }
+        public string Username { get; set; }
+        public string Password { get; set; }
+        public List<CardDto> Cards { get; set; }
     }
 
     public class ClientCreateDto
@@ -19,7 +23,9 @@ namespace PointFood.Dto
         public string Name { get; set; }
         public string Dni { get; set; }
         public string Email { get; set; }
-        public DateTime Birthday { get; set; }
+        public DateTime Birthdate { get; set; }
+        public string Username { get; set; }
+        public string Password { get; set; }
     }
 
     public class ClientUpdateDto
@@ -27,6 +33,8 @@ namespace PointFood.Dto
         public string Name { get; set; }
         public string Dni { get; set; }
         public string Email { get; set; }
-        public DateTime Birthday { get; set; }
+        public DateTime Birthdate { get; set; }
+        public string Username { get; set; }
+        public string Password { get; set; }
     }
 }

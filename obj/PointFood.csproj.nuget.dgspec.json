@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\prueba para actualizar master\\Point-Food\\PointFood.csproj": {}
+    "C:\\Users\\User\\Desktop\\Poyecto Unido Actualizado\\Point-Food\\PointFood.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\prueba para actualizar master\\Point-Food\\PointFood.csproj": {
+    "C:\\Users\\User\\Desktop\\Poyecto Unido Actualizado\\Point-Food\\PointFood.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\prueba para actualizar master\\Point-Food\\PointFood.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\Poyecto Unido Actualizado\\Point-Food\\PointFood.csproj",
         "projectName": "PointFood",
-        "projectPath": "C:\\Users\\User\\Desktop\\prueba para actualizar master\\Point-Food\\PointFood.csproj",
+        "projectPath": "C:\\Users\\User\\Desktop\\Poyecto Unido Actualizado\\Point-Food\\PointFood.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\prueba para actualizar master\\Point-Food\\obj\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\Poyecto Unido Actualizado\\Point-Food\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -45,6 +45,10 @@
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[7.0.0, )"
+            },
+            "GenFu": {
+              "target": "Package",
+              "version": "[1.6.0, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",

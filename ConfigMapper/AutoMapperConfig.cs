@@ -18,27 +18,21 @@ namespace PointFood.ConfigMapper
             CreateMap<DataCollection<Order>,DataCollection<OrderDto>>();
             CreateMap<OrderCreateDto, Order>();
 
+            //OrderDetail
             CreateMap<OrderDetailCreateDto, OrderDetail>();
 
             //Extra
             CreateMap<Extra, ExtraDto>();
             CreateMap<DataCollection<Extra>, DataCollection<ExtraDto>>();
-            CreateMap<ExtraCreateDto, Extra>();
 
             //Card
             CreateMap<Card, CardDto>();
-            CreateMap<DataCollection<Card>, DataCollection<CardDto>>();
             CreateMap<CardCreateDto, Card>();
 
             //Client
             CreateMap<Client, ClientDto>();
             CreateMap<DataCollection<Client>, DataCollection<ClientDto>>();
             CreateMap<ClientCreateDto, Client>();
-
-            //Table
-            CreateMap<Table, TableDto>();
-            CreateMap<DataCollection<Table>, DataCollection<TableDto>>();
-            CreateMap<TableCreateDto, TableDto>();
 
             //Dish
             CreateMap<Dish, DishDto>();
@@ -48,7 +42,6 @@ namespace PointFood.ConfigMapper
             //Restaurant
             CreateMap<Restaurant, RestaurantDto>();
             CreateMap<DataCollection<Restaurant>, DataCollection<RestaurantDto>>();
-            CreateMap<RestaurantCreateDto, Restaurant>();
 
             //Restaurant Owner
             CreateMap<RestaurantOwner, RestaurantOwnerDto>();
