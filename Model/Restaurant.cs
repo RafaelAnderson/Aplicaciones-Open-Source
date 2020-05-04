@@ -14,6 +14,6 @@ namespace PointFood.Model
         public int RestauranteOwnerId { get; set; }
         public RestaurantOwner RestaurantOwner { get; set; }
 
-        List<Order> Orders { get; set; }
+        public List<Order> Orders { get; set; }
     }
 }

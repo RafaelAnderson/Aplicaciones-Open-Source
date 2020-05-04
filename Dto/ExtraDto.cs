@@ -10,18 +10,14 @@ namespace PointFood.Dto
     {
         public int ExtraId { get; set; }
         public string Name { get; set; }
-        public int Quantity { get; set; }
+        public decimal Price { get; set; }
     }
 
-    public class ExtraCreateDto
+    public class ExtrasInfoDto
     {
+        public int ExtraId { get; set; }
         public string Name { get; set; }
-        public int Quantity { get; set; }
-    }
-
-    public class ExtraUpdateDto
-    {
-        [Required]
-        public int Name { get; set; }
+        public string Description { get; set; }
+        public decimal Price { get; set; }
     }
 }

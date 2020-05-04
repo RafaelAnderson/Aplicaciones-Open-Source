@@ -10,20 +10,20 @@ namespace PointFood.Dto
     {
         public int DishId { get; set; }
         public string Name { get; set; }
-        public string Description { get; set; }
         public decimal Price { get; set; }
-        List<Dish_extra> Dish_Extras { get; set; }
+        public List<DishExtraDto> DishExtras { get; set; }
     }
 
-    public class DishCreateDto
+    public class DishesInfoDto
     {
+        public int DishId { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public decimal Price { get; set; }
     }
+       
 
-    public class DishUpdateDto
-    {
-        public string Name { get; set; }
-    }
+    
+
+    
 }

@@ -9,13 +9,13 @@ namespace PointFood.Dto
     {
         public int TableId { get; set; }
         public int TableNumber { get; set; }
-        public bool avaliable { get; set; }
+        public bool Avaliable { get; set; }
     }
 
     public class TableCreateDto
     {
         public int TableNumber { get; set; }
-        public bool avaliable { get; set; }
+        public bool Avaliable { get; set; }
     }
 
     public class TableUpdateDto

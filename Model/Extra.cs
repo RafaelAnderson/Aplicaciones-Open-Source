@@ -9,8 +9,8 @@ namespace PointFood.Model
     {
         public int ExtraId { get; set; }
         public string Name { get; set; }
-        public int Quantity { get; set; }
-
-        public List<Dish_extra> dishDetails { get; set; }
+        public string Description { get; set; }
+        public decimal Price { get; set; }
+        public List<DishExtra> Dishes { get; set; }
     }
 }

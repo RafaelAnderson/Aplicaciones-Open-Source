@@ -16,6 +16,10 @@ namespace PointFood.Persistence.Config
                 .WithMany(x => x.Dishes)
                 .HasForeignKey(x => x.OrderId);
 
+            entityBuilder.HasOne(x => x.Dish)
+                .WithMany(x => x.Orders)
+                .HasForeignKey(x => x.DishId);
+
             entityBuilder.Property(x => x.SubTotal).IsRequired().HasColumnType("decimal(5,2)");
         }
     }
