@@ -13,7 +13,9 @@ namespace PointFood.Persistence.Config
         public CardConfig(EntityTypeBuilder<Card> entityBuilder)
         {
             entityBuilder.Property(x => x.Number).IsRequired().HasMaxLength(16);
-            entityBuilder.Property(X => X.ClientId).IsRequired();
+            entityBuilder.HasOne(x => x.Client)
+                .WithMany(x => x.Cards)
+                .HasForeignKey(x => x.ClientId);
         }
     }
 }

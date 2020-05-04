@@ -18,7 +18,7 @@ namespace PointFood.Persistence
         public DbSet<Card> Cards { get; set; }
         public DbSet<Client> Clients { get; set; }
         public DbSet<Dish> Dishes { get; set; }
-        public DbSet<Dish_extra> Dish_extra { get; set; }
+        public DbSet<DishExtra> DishExtra { get; set; }
         public DbSet<Extra> Extras { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderDetail> OrderDetail { get; set; }
@@ -33,7 +33,7 @@ namespace PointFood.Persistence
             new CardConfig(builder.Entity<Card>());
             new ClientConfig(builder.Entity<Client>());
             new DishConfig(builder.Entity<Dish>());
-            new Dish_extraConfig(builder.Entity<Dish_extra>());
+            new DishExtraConfig(builder.Entity<DishExtra>());
             new ExtraConfig(builder.Entity<Extra>());
             new OrderConfig(builder.Entity<Order>());
             new OrderDetailConfig(builder.Entity<OrderDetail>());

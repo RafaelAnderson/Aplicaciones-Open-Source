@@ -12,7 +12,7 @@ namespace PointFood.Model
         public string Description { get; set; }
         public decimal Price { get; set; }
 
-        List<OrderDetail> orderDetails { get; set; }
-        List<Dish_extra> Dish_Extras { get; set; }
+        public List<OrderDetail> Orders { get; set; }
+        public List<DishExtra> Extras { get; set; }
     }
 }

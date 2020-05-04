@@ -8,8 +8,8 @@ namespace PointFood.Model
     public class Table
     {
         public int TableId { get; set; }
-        public int Tablenumber { get; set; }
-        public bool avaliable { get; set; }
-        List<Reservation> Reservations { get; set; }
+        public int TableNumber { get; set; }
+        public bool Avaliable { get; set; }
+        public List<Reservation> Reservations { get; set; }
     }
 }

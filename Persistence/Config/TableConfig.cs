@@ -12,7 +12,7 @@ namespace PointFood.Persistence.Config
     {
         public TableConfig(EntityTypeBuilder<Table>EntityBuilder)
         {
-            EntityBuilder.Property(X => X.avaliable).IsRequired();
+            EntityBuilder.Property(X => X.Avaliable).IsRequired();
         }
     }
 }
