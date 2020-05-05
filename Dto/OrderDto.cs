@@ -17,11 +17,6 @@ namespace PointFood.Dto
 
     public class OrderDetailCreateDto
     {
-        public DishCreateDto Dish { get; set; }
-    }
-
-    public class DishCreateDto
-    {
         public int DishId { get; set; }
         public List<DishExtraCreateDto> Extras { get; set; }
     }
@@ -33,6 +28,11 @@ namespace PointFood.Dto
     }
 
     public class OrderUpdateDto
+    {
+        public string State { get; set; }
+    }
+
+    public class OrderStateDto
     {
         public string State { get; set; }
     }

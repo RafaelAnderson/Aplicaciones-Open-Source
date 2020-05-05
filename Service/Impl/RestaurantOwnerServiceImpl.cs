@@ -22,7 +22,7 @@ namespace PointFood.Service.Impl
             _mapper = mapper;
         }
 
-        DataCollection<RestaurantOwnerDto> IRestaurantOwnerService.GetAll(int page, int take)
+        public DataCollection<RestaurantOwnerDto> GetAll(int page, int take)
         {
             return _mapper.Map<DataCollection<RestaurantOwnerDto>>(
                 _context.RestaurantOwners

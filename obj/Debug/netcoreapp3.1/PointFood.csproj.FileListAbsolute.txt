@@ -162,3 +162,11 @@ C:\Users\User\Desktop\Poyecto Unido Actualizado\Point-Food\obj\Debug\netcoreapp3
 C:\Users\User\Desktop\Poyecto Unido Actualizado\Point-Food\obj\Debug\netcoreapp3.1\PointFood.dll
 C:\Users\User\Desktop\Poyecto Unido Actualizado\Point-Food\obj\Debug\netcoreapp3.1\PointFood.pdb
 C:\Users\User\Desktop\Poyecto Unido Actualizado\Point-Food\obj\Debug\netcoreapp3.1\PointFood.genruntimeconfig.cache
+C:\Users\User\Desktop\Poyecto Unido Actualizado\Point-Food\bin\Debug\netcoreapp3.1\GenFu.dll
+C:\Users\User\Desktop\Poyecto Unido Actualizado\Point-Food\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Users\User\Desktop\Poyecto Unido Actualizado\Point-Food\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\User\Desktop\Poyecto Unido Actualizado\Point-Food\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\User\Desktop\Poyecto Unido Actualizado\Point-Food\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\User\Desktop\Poyecto Unido Actualizado\Point-Food\obj\Debug\netcoreapp3.1\PointFood.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Poyecto Unido Actualizado\Point-Food\obj\Debug\netcoreapp3.1\PointFood.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\User\Desktop\Poyecto Unido Actualizado\Point-Food\obj\Debug\netcoreapp3.1\PointFood.MvcApplicationPartsAssemblyInfo.cache

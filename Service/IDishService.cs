@@ -9,6 +9,6 @@ namespace PointFood.Service
 {
     public interface IDishService
     {
-        DataCollection<DishesInfoDto> GetAll(int page, int take);
+        DataCollection<DishDto> GetAll(int page, int take);
     }
 }

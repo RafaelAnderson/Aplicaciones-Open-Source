@@ -13,7 +13,7 @@ namespace PointFood.Model
         public string Dni { get; set; }
         public string Email { get; set; }
         public string Username { get; set; }
-        public Guid Password { get; set; }
+        public string Password { get; set; }
         public List<Restaurant> Restaurants { get; set; }
     }
 }

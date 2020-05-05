@@ -31,24 +31,13 @@ namespace PointFood.Service.Impl
             _context.Add(entry);
             _context.SaveChanges();
 
-            return _mapper.Map<ClientDto>(entry);
+            return _mapper.Map<ClientDto>(GetById(entry.ClientId));
         }
 
-        public DataCollection<ClientDto> GetAll(int page, int take)
-        {
-            return _mapper.Map<DataCollection<ClientDto>>(
-                _context.Clients
-                .Include(x => x.Cards)
-                .OrderByDescending(x => x.ClientId)
-                .AsQueryable()
-                .Paged(page, take)
-                );
-        }
-
-        public ClientDto GetByUsernameAndPassword(string Username, string Password)
+        public ClientDto GetById(int id)
         {
             return _mapper.Map<ClientDto>(
-                _context.Clients.Single(x => (x.Username == Username) && (x.Password == Password))
+                _context.Clients.Single(x => x.ClientId == id)
                 );
         }
 
@@ -73,6 +62,22 @@ namespace PointFood.Service.Impl
             entry.Password = model.Password;
 
             _context.SaveChanges();
+        }
+
+        public ClientDto GetByUsernameAndPassword(ClientLoginDto model)
+        {
+            return _mapper.Map<ClientDto>(_context.Clients.Single(x => (x.Username == model.Username) && (x.Password == model.Password)));
+        }
+
+        public DataCollection<ClientDto> GetAll(int page, int take)
+        {
+            return _mapper.Map<DataCollection<ClientDto>>(
+                _context.Clients
+                .Include(x => x.Cards)
+                .OrderBy(x => x.ClientId)
+                .AsQueryable()
+                .Paged(page, take)
+                );
         }
     }
 }

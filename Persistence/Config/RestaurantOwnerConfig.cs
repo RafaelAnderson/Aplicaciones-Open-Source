@@ -12,7 +12,7 @@ namespace PointFood.Persistence.Config
     {
         public RestaurantOwnerConfig(EntityTypeBuilder<RestaurantOwner> entityBuilder)
         {
-            var id = 0;
+            var id = 1;
             var dni = 10000000;
             A.Configure<RestaurantOwner>()
                 .Fill(x => x.RestaurantOwnerId, () => { return id++; })
@@ -21,7 +21,7 @@ namespace PointFood.Persistence.Config
                 .Fill(x => x.Dni, () => { return dni++.ToString(); })
                 .Fill(x => x.Email, x => $"{x.Name}.{x.LastName}@hotmail.com")
                 .Fill(x => x.Username, x => $"{x.Dni}")
-                .Fill(x => x.Password, new Guid());
+                .Fill(x => x.Password, "admin");
 
             var RestaurantOwners = A.ListOf<RestaurantOwner>(5);
             entityBuilder.HasData(RestaurantOwners);

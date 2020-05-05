@@ -11,15 +11,6 @@ namespace PointFood.Dto
         public int DishId { get; set; }
         public string Name { get; set; }
         public decimal Price { get; set; }
-        public List<DishExtraDto> DishExtras { get; set; }
-    }
-
-    public class DishesInfoDto
-    {
-        public int DishId { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public decimal Price { get; set; }
     }
        
 

@@ -15,6 +15,8 @@ namespace PointFood.Model
         public int DishId { get; set; }
         public Dish Dish { get; set; }
 
+        public List<DishExtra> Extras { get; set; }
+
         public decimal SubTotal { get; set; }
         
     }

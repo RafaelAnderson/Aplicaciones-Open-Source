@@ -9,6 +9,7 @@ namespace PointFood.Dto
     {
         public int OrderDetailId { get; set; }
         public DishDto Dish { get; set; }
+        public List<DishExtraDto> Extras { get; set; }
         public decimal SubTotal { get; set; }
     }
 }

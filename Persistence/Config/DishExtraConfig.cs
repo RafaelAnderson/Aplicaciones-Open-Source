@@ -12,12 +12,13 @@ namespace PointFood.Persistence.Config
     {
         public DishExtraConfig(EntityTypeBuilder<DishExtra> entityBuilder)
         {
-            entityBuilder.HasOne(x => x.Dish)
+            entityBuilder.HasOne(x => x.OrderDetail)
                 .WithMany(x => x.Extras)
-                .HasForeignKey(x => x.DishId);
+                .HasForeignKey(x => x.OrderDetailId)
+                .IsRequired(false);
 
             entityBuilder.HasOne(x => x.Extra)
-                .WithMany(x => x.Dishes)
+                .WithMany()
                 .HasForeignKey(x => x.ExtraId);
 
             entityBuilder.Property(x => x.Quantity).IsRequired();

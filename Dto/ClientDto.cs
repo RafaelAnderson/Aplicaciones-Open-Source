@@ -28,6 +28,12 @@ namespace PointFood.Dto
         public string Password { get; set; }
     }
 
+    public class ClientLoginDto
+    {
+        public string Username { get; set; }
+        public string Password { get; set; }
+    }
+
     public class ClientUpdateDto
     {
         public string Name { get; set; }

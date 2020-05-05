@@ -13,11 +13,11 @@ namespace PointFood.Persistence.Config
         public OrderConfig(EntityTypeBuilder<Order> entityBuilder)
         {
             entityBuilder.HasOne(x => x.Client)
-                .WithMany(x => x.Orders)
+                .WithMany()
                 .HasForeignKey(x => x.ClientId);
 
             entityBuilder.HasOne(x => x.Restaurant)
-                .WithMany(x => x.Orders)
+                .WithMany()
                 .HasForeignKey(x => x.RestaurantId);
 
             entityBuilder.Property(x => x.RegisteredAt).IsRequired();

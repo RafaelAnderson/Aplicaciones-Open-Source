@@ -22,10 +22,10 @@ namespace PointFood.Service.Impl
             _mapper = mapper;
         }
 
-        public DataCollection<ExtrasInfoDto> GetAll(int page, int take)
+        public DataCollection<ExtraDto> GetAll(int page, int take)
         {
-            return _mapper.Map<DataCollection<ExtrasInfoDto>>(
-                _context.Extras.OrderByDescending(x => x.ExtraId)
+            return _mapper.Map<DataCollection<ExtraDto>>(
+                _context.Extras.OrderBy(x => x.ExtraId)
                 .AsQueryable()
                 .Paged(page, take)
                 );

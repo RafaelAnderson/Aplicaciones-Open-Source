@@ -22,10 +22,10 @@ namespace PointFood.Persistence
         public DbSet<Extra> Extras { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderDetail> OrderDetail { get; set; }
-        public DbSet<Reservation> Reservations{ get; set; }
+        //public DbSet<Reservation> Reservations{ get; set; }
         public DbSet<Restaurant> Restaurants { get; set; }
         public DbSet<RestaurantOwner> RestaurantOwners { get; set; }
-        public DbSet<Table> Tables { get; set; }
+        // public DbSet<Table> Tables { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -39,7 +39,7 @@ namespace PointFood.Persistence
             new OrderDetailConfig(builder.Entity<OrderDetail>());
             new RestaurantConfig(builder.Entity<Restaurant>());
             new RestaurantOwnerConfig(builder.Entity<RestaurantOwner>());
-            new TableConfig(builder.Entity<Table>());
+            // new TableConfig(builder.Entity<Table>());
         }
     }
 }

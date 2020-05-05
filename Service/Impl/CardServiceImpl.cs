@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using PointFood.Dto;
 using PointFood.Model;
 using PointFood.Persistence;
@@ -28,7 +29,16 @@ namespace PointFood.Service.Impl
             _context.Add(entry);
             _context.SaveChanges();
 
-            return _mapper.Map<CardDto>(entry);
+            return _mapper.Map<CardDto>(GetById(entry.CardId));
+        }
+
+        public CardDto GetById(int id)
+        {
+            return _mapper.Map<CardDto>(
+                _context.Cards
+                .Include(x => x.Client)
+                .Single(x => x.CardId == id)
+                );
         }
 
         public void Remove(int id)
