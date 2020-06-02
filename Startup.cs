@@ -36,7 +36,7 @@ namespace PointFood
                 {
                     Title = "API PointFood",
                     Version = "v1",
-                    Description = "Aplicación móvil que permita a los usuarios reservar una mesa en el restaurante, así como registrar una hora aproximada de llegada al establecimiento, la elección de los ingredientes de su platillo y que los mozos tengan el pedido listo, y este a su vez haya sido preparado conforme el cliente haya registrado las especificaciones para su personalización.",
+                    Description = "API PointFood del curso Aplicaciones Web con NetCore",
                     TermsOfService = new Uri("https://example.com/terms"),
                     Contact = new OpenApiContact
                     {
@@ -55,12 +55,13 @@ namespace PointFood
             services.AddAutoMapper(typeof(Startup));
 
             services.AddTransient<ICardService, CardServiceImpl>();
+            services.AddTransient<ICategoryService, CategoryServiceImpl>();
             services.AddTransient<IClientService, ClientServiceImpl>();
-            services.AddTransient<IDishService, DishServiceImpl>();
-            services.AddTransient<IExtraService, ExtraServiceImpl>();
+            services.AddTransient<IMenuService, MenuServiceImpl>();
             services.AddTransient<IOrderService, OrderServiceImpl>();
             services.AddTransient<IRestaurantOwnerService, RestaurantOwnerServiceImpl>();
             services.AddTransient<IRestaurantService, RestaurantServiceImpl>();
+            services.AddTransient<IStateService, StateServiceImpl>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

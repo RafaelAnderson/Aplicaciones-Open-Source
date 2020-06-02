@@ -20,10 +20,10 @@ namespace PointFood.Controllers
             _restaurantOwnerService = restaurantOwnerService;
         }
 
-        [HttpGet]
-        public ActionResult<DataCollection<RestaurantOwnerDto>> GetAll(int page, int take)
+        [HttpGet("login")]
+        public ActionResult<RestaurantOwnerDto> GetByUsernameAndPassword(RestaurantOwnerLoginDto model)
         {
-            return _restaurantOwnerService.GetAll(page, take);
+            return _restaurantOwnerService.GetByUsernameAndPassword(model);
         }
     }
 }

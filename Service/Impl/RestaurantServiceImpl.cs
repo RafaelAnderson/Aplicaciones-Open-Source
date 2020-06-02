@@ -26,9 +26,20 @@ namespace PointFood.Service.Impl
         {
             return _mapper.Map<DataCollection<RestaurantDto>>(
                _context.Restaurants
-               .Include(x => x.RestaurantOwner)
+               .Include(x => x.Category)
                .OrderBy(x => x.RestaurantId)
                .AsQueryable()
+               .Paged(page, take)
+               );
+        }
+
+        public DataCollection<RestaurantDto> GetByCategory(int CategoryId, int page, int take)
+        {
+            return _mapper.Map<DataCollection<RestaurantDto>>(
+               _context.Restaurants
+               .Include(x => x.Category)
+               .OrderBy(x => x.RestaurantId)
+               .AsQueryable().Where(x => x.CategoryId == CategoryId)
                .Paged(page, take)
                );
         }

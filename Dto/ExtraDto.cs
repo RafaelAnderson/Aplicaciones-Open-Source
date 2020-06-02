@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace PointFood.Dto
 {
-    public class ExtraDto
+    public class ExtraOrderDto
+    {
+        public int ExtraId { get; set; }
+        public string Name { get; set; }
+        public decimal Price { get; set; }
+    }
+    public class ExtraMenuDto
     {
         public int ExtraId { get; set; }
         public string Name { get; set; }

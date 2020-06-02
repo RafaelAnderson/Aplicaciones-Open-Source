@@ -22,14 +22,13 @@ namespace PointFood.Service.Impl
             _mapper = mapper;
         }
 
-        public DataCollection<RestaurantOwnerDto> GetAll(int page, int take)
+        public RestaurantOwnerDto GetByUsernameAndPassword(RestaurantOwnerLoginDto model)
         {
-            return _mapper.Map<DataCollection<RestaurantOwnerDto>>(
+            return _mapper.Map<RestaurantOwnerDto>(
                 _context.RestaurantOwners
-                .Include(x => x.Restaurants)
-                .OrderBy(x => x.RestaurantOwnerId)
-                .AsQueryable()
-                .Paged(page, take)
+                .Include(x => x.Restaurant)
+                    .ThenInclude(x => x.Category)
+                .Single(x => (x.Username == model.Username) && (x.Password == model.Password))
                 );
         }
     }

@@ -13,10 +13,11 @@ namespace PointFood.Persistence.Config
         {
             entityBuilder.Property(x => x.Name).IsRequired().HasMaxLength(30);
             entityBuilder.Property(x => x.Address).IsRequired().HasMaxLength(100);
+            entityBuilder.Property(x => x.PhoneNumber).IsRequired().HasMaxLength(9);
 
-            entityBuilder.HasOne(x => x.RestaurantOwner)
+            entityBuilder.HasOne(x => x.Category)
                 .WithMany(x => x.Restaurants)
-                .HasForeignKey(x => x.RestauranteOwnerId);
+                .HasForeignKey(x => x.CategoryId);
         }
     }
 }

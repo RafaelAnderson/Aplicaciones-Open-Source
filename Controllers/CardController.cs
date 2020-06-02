@@ -24,27 +24,27 @@ namespace PointFood.Controllers
         {
             var result = _cardService.Create(card);
 
-            return CreatedAtAction("GetById", new { id = result.CardId}, result);
+            return CreatedAtAction("GetById", new { cardId = result.CardId}, result);
         }
 
-        [HttpGet("{id}")]
-        public ActionResult<CardDto> GetById(int id)
+        [HttpGet("{cardId}")]
+        public ActionResult<CardDto> GetById(int cardId)
         {
-            return _cardService.GetById(id);
+            return _cardService.GetById(cardId);
         }
 
-        [HttpPut("{id}")]
-        public ActionResult Update(int id, CardUpdateDto model)
+        [HttpPut("{cardId}")]
+        public ActionResult Update(int cardId, CardUpdateDto model)
         {
-            _cardService.Update(id, model);
+            _cardService.Update(cardId, model);
             return Ok();
         }
 
 
-        [HttpDelete("{id}")]
-        public ActionResult Remove(int id)
+        [HttpDelete("{cardId}")]
+        public ActionResult Remove(int cardId)
         {
-            _cardService.Remove(id);
+            _cardService.Remove(cardId);
             return Ok();
         }
     }

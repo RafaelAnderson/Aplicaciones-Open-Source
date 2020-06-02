@@ -10,19 +10,7 @@ namespace PointFood.Dto
         public int RestaurantId { get; set; }
         public string Name { get; set; }
         public string Address { get; set; }
-        public string RestaurantOwnerName { get; set; }
-    }
-
-    public class RestaurantCreateDto
-    {
-        public string Name { get; set; }
-        public string Address { get; set; }
-        public int RestauranteOwnerId { get; set; }
-    }
-
-    public class RestaurantUpdateDto
-    {
-        public string Name { get; set; }
-        public string Address { get; set; }
+        public string PhoneNumber { get; set; }
+        public string CategoryName { get; set; }
     }
 }

@@ -6859,11 +6859,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Desktop\\Poyecto Unido Actualizado\\Point-Food\\PointFood.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\WEB TRABAJO\\TPARCIAL - APLICACIONES WEB\\Point-Food\\PointFood.csproj",
       "projectName": "PointFood",
-      "projectPath": "C:\\Users\\User\\Desktop\\Poyecto Unido Actualizado\\Point-Food\\PointFood.csproj",
+      "projectPath": "C:\\Users\\User\\Desktop\\WEB TRABAJO\\TPARCIAL - APLICACIONES WEB\\Point-Food\\PointFood.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Desktop\\Poyecto Unido Actualizado\\Point-Food\\obj\\",
+      "outputPath": "C:\\Users\\User\\Desktop\\WEB TRABAJO\\TPARCIAL - APLICACIONES WEB\\Point-Food\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6939,7 +6939,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

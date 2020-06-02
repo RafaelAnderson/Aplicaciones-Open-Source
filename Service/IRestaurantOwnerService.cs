@@ -9,6 +9,6 @@ namespace PointFood.Service
 {
     public interface IRestaurantOwnerService
     {
-        DataCollection<RestaurantOwnerDto> GetAll(int page, int take);
+        RestaurantOwnerDto GetByUsernameAndPassword(RestaurantOwnerLoginDto model);
     }
 }

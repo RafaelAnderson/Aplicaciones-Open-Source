@@ -27,10 +27,10 @@ namespace PointFood.Service.Impl
         {
             var entry = _mapper.Map<Order>(model);
             entry.RegisteredAt = DateTime.Now;
-            CalculateSubTotalDishExtra(entry.Dishes);
-            CalculateSubtotalOrderDetail(entry.Dishes);
-            entry.Total = entry.Dishes.Sum(x => x.SubTotal);
-            entry.State = "Pendiente";
+            CalculateSubTotalDishExtra(entry.Products);
+            CalculateSubtotalOrderDetail(entry.Products);
+            entry.Total = entry.Products.Sum(x => x.SubTotal);
+            entry.StateId = 1;
 
             _context.Add(entry);
             _context.SaveChanges();
@@ -44,72 +44,76 @@ namespace PointFood.Service.Impl
                 _context.Orders
                 .Include(x => x.Client)
                 .Include(x => x.Restaurant)
-                    .ThenInclude(x => x.RestaurantOwner)
-                .Include(x => x.Dishes)
+                    .ThenInclude(x => x.Category)
+                .Include(x => x.Products)
                     .ThenInclude(x => x.Extras)
                         .ThenInclude(x => x.Extra)
-                .Include(x => x.Dishes)
-                    .ThenInclude(x => x.Dish)
+                .Include(x => x.Products)
+                    .ThenInclude(x => x.Product)
+                .Include(x => x.State)
                 .Single(x => x.OrderId == id));
         }
 
-        public void CalculateSubTotalDishExtra(IEnumerable<OrderDetail> dishes)
+        public void CalculateSubTotalDishExtra(IEnumerable<OrderDetail> products)
         {
-            foreach(var dish in dishes)
+            foreach(var product in products)
             {
-                foreach(var extra in dish.Extras)
+                foreach(var extra in product.Extras)
                 {
                     extra.SubTotal = _context.Extras.Single(x => x.ExtraId == extra.ExtraId).Price * extra.Quantity;
                 }
             }
         }
 
-        public void CalculateSubtotalOrderDetail(IEnumerable<OrderDetail> dishes)
+        public void CalculateSubtotalOrderDetail(IEnumerable<OrderDetail> products)
         {
-            foreach(var dish in dishes)
+            foreach(var product in products)
             {
-                dish.SubTotal = dish.Extras.Sum(x => x.SubTotal) + _context.Dishes.Single(x => x.DishId == dish.DishId).Price;        
+                product.SubTotal = product.Extras.Sum(x => x.SubTotal) + _context.Products.Single(x => x.ProductId == product.ProductId).Price;        
             }
         }
 
-        public DataCollection<OrderDto> GetAll(int page, int take)
+        public DataCollection<OrderDto> GetByRestaurant(int RestaurantId, int page, int take)
         {
             return _mapper.Map<DataCollection<OrderDto>>(
                 _context.Orders.OrderBy(x => x.OrderId)
                 .Include(x => x.Client)
                 .Include(x => x.Restaurant)
-                    .ThenInclude(x => x.RestaurantOwner)
-                .Include(x => x.Dishes)
+                    .ThenInclude(x => x.Category)
+                .Include(x => x.Products)
                     .ThenInclude(x => x.Extras)
                         .ThenInclude(x => x.Extra)
-                .Include(x => x.Dishes)
-                    .ThenInclude(x => x.Dish)
-                .AsQueryable()
+                .Include(x => x.Products)
+                    .ThenInclude(x => x.Product)
+                .Include(x => x.State)
+                .AsQueryable().Where(x => x.RestaurantId == RestaurantId)
                 .Paged(page, take)
                 );
         }
 
 
-        public void Update(int id, OrderUpdateDto model)
+        public void UpdateState(int id, OrderUpdateDto model)
         {
             var entry = _context.Orders.Single(x => x.OrderId == id);
-            entry.State = model.State;
+            entry.StateId = model.StateId;
 
             _context.SaveChanges();
         }
 
-        public DataCollection<OrderDto> GetByState(OrderStateDto model, int page, int take)
+        public DataCollection<OrderDto> GetByStateAndRestaurant(int RestaurantId, int StateId, int page, int take)
         {
             return _mapper.Map<DataCollection<OrderDto>>(
                 _context.Orders.OrderBy(x => x.OrderId)
                 .Include(x => x.Client)
                 .Include(x => x.Restaurant)
-                .Include(x => x.Dishes)
+                    .ThenInclude(x => x.Category)
+                .Include(x => x.Products)
                     .ThenInclude(x => x.Extras)
                         .ThenInclude(x => x.Extra)
-                .Include(x => x.Dishes)
-                    .ThenInclude(x => x.Dish)
-                .AsQueryable().Where(x => x.State == model.State)
+                .Include(x => x.Products)
+                    .ThenInclude(x => x.Product)
+                .Include(x => x.State)
+                .AsQueryable().Where(x => x.RestaurantId == RestaurantId && x.StateId == StateId)
                 .Paged(page, take)
                 );
         }

@@ -25,31 +25,31 @@ namespace PointFood.Controllers
         {
             var result = _orderService.Create(order);
 
-            return CreatedAtAction("GetById", new { id = result.OrderId }, result);
+            return CreatedAtAction("GetById", new { orderId = result.OrderId }, result);
         }
 
-        [HttpGet("{id}")]
-        public ActionResult<OrderDto> GetById(int id)
+        [HttpGet("{orderId}")]
+        public ActionResult<OrderDto> GetById(int orderId)
         {
-            return _orderService.GetById(id);
+            return _orderService.GetById(orderId);
         }
 
-        [HttpGet]
-        public ActionResult<DataCollection<OrderDto>> GetAll(int page, int take)
+        [HttpGet("restaurants/{restaurantId}")]
+        public ActionResult<DataCollection<OrderDto>> GetByRestaurant(int restaurantId, int page, int take)
         {
-            return _orderService.GetAll(page, take);
+            return _orderService.GetByRestaurant(restaurantId, page, take);
         }
 
-        [HttpGet("state")]
-        public ActionResult<DataCollection<OrderDto>> GetByState(OrderStateDto model, int page, int take)
+        [HttpGet("restaurants/{restaurantId}/states/{stateId}")]
+        public ActionResult<DataCollection<OrderDto>> GetByStateAndRestaurant(int restaurantId, int stateId, int page, int take)
         {
-            return _orderService.GetByState(model, page, take);
+            return _orderService.GetByStateAndRestaurant(restaurantId, stateId, page, take);
         }
 
-        [HttpPut("{id}")]
-        public ActionResult Update(int id, OrderUpdateDto model)
+        [HttpPut("{orderId}")]
+        public ActionResult UpdateState(int orderId, OrderUpdateDto model)
         {
-            _orderService.Update(id, model);
+            _orderService.UpdateState(orderId, model);
             return Ok();
         }
     }

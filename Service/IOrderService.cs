@@ -9,10 +9,10 @@ namespace PointFood.Service
 {
     public interface IOrderService
     {
-        DataCollection<OrderDto> GetByState(OrderStateDto model, int page, int take);
-        DataCollection<OrderDto> GetAll(int page, int take);
+        DataCollection<OrderDto> GetByStateAndRestaurant(int RestaurantId, int StateId, int page, int take);
+        DataCollection<OrderDto> GetByRestaurant(int RestaurantId, int page, int take);
         OrderDto Create(OrderCreateDto model);
         OrderDto GetById(int id);
-        void Update(int id, OrderUpdateDto model);
+        void UpdateState(int id, OrderUpdateDto model);
     }
 }

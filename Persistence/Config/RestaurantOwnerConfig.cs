@@ -12,6 +12,10 @@ namespace PointFood.Persistence.Config
     {
         public RestaurantOwnerConfig(EntityTypeBuilder<RestaurantOwner> entityBuilder)
         {
+            entityBuilder.HasOne(x => x.Restaurant)
+                .WithOne(x => x.RestaurantOwner)
+                .HasForeignKey<Restaurant>(x => x.RestauranteOwnerId);
+
             var id = 1;
             var dni = 10000000;
             A.Configure<RestaurantOwner>()
@@ -25,7 +29,6 @@ namespace PointFood.Persistence.Config
 
             var RestaurantOwners = A.ListOf<RestaurantOwner>(5);
             entityBuilder.HasData(RestaurantOwners);
-
         }
     }
 }

@@ -25,13 +25,13 @@ namespace PointFood.Controllers
         {
             var result = _clientService.Create(client);
 
-            return CreatedAtAction("GetById", new { id = result.ClientId }, result);
+            return CreatedAtAction("GetById", new { clientId = result.ClientId }, result);
         }
 
-        [HttpGet("{id}")]
-        public ActionResult<ClientDto> GetById(int id)
+        [HttpGet("{clientId}")]
+        public ActionResult<ClientDto> GetById(int clientId)
         {
-            return _clientService.GetById(id);
+            return _clientService.GetById(clientId);
         }
 
         [HttpGet]
@@ -46,17 +46,17 @@ namespace PointFood.Controllers
             return _clientService.GetByUsernameAndPassword(model);
         }
 
-        [HttpPut("{id}")]
-        public ActionResult Update(int id, ClientUpdateDto model)
+        [HttpPut("{clientId}")]
+        public ActionResult Update(int clientId, ClientUpdateDto model)
         {
-            _clientService.Update(id, model);
+            _clientService.Update(clientId, model);
             return Ok();
         }
 
-        [HttpDelete("{id}")]
-        public ActionResult Remove(int id)
+        [HttpDelete("{clientId}")]
+        public ActionResult Remove(int clientId)
         {
-            _clientService.Remove(id);
+            _clientService.Remove(clientId);
             return Ok();
         }
     }

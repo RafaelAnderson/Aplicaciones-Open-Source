@@ -20,10 +20,15 @@ namespace PointFood.Persistence.Config
                 .WithMany()
                 .HasForeignKey(x => x.RestaurantId);
 
+            entityBuilder.HasOne(x => x.State)
+                .WithMany()
+                .HasForeignKey(x => x.StateId);
+
             entityBuilder.Property(x => x.RegisteredAt).IsRequired();
             entityBuilder.Property(x => x.DeliveredAt).IsRequired();
+            entityBuilder.Property(x => x.Delivery).IsRequired();
+            entityBuilder.Property(x => x.Address).IsRequired(false);
             entityBuilder.Property(x => x.Total).IsRequired().HasColumnType("decimal(6,2)");
-            entityBuilder.Property(x => x.State).IsRequired();
         }
     }
 }

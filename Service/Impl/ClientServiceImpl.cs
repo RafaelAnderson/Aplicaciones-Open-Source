@@ -37,7 +37,9 @@ namespace PointFood.Service.Impl
         public ClientDto GetById(int id)
         {
             return _mapper.Map<ClientDto>(
-                _context.Clients.Single(x => x.ClientId == id)
+                _context.Clients
+                .Include(x => x.Cards)
+                .Single(x => x.ClientId == id)
                 );
         }
 
@@ -55,9 +57,8 @@ namespace PointFood.Service.Impl
         {
             var entry = _context.Clients.Single(x => x.ClientId == id);
             entry.Name = model.Name;
-            entry.Dni = model.Dni;
             entry.Email = model.Email;
-            entry.Birthdate = model.Birthdate;
+            entry.PhoneNumber = model.PhoneNumber;
             entry.Username = model.Username;
             entry.Password = model.Password;
 
@@ -66,7 +67,11 @@ namespace PointFood.Service.Impl
 
         public ClientDto GetByUsernameAndPassword(ClientLoginDto model)
         {
-            return _mapper.Map<ClientDto>(_context.Clients.Single(x => (x.Username == model.Username) && (x.Password == model.Password)));
+            return _mapper.Map<ClientDto>(
+                _context.Clients
+                .Include(x => x.Cards)
+                .Single(x => (x.Username == model.Username) && (x.Password == model.Password))
+                );
         }
 
         public DataCollection<ClientDto> GetAll(int page, int take)

@@ -10,5 +10,6 @@ namespace PointFood.Service
     public interface IRestaurantService
     {
         DataCollection<RestaurantDto> GetAll(int page, int take);
+        DataCollection<RestaurantDto> GetByCategory(int CategoryId, int page, int take);
     }
 }
