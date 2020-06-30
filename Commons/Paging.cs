@@ -7,7 +7,8 @@ namespace PointFood.Commons
 {
     public static class Paging
     {
-        public static DataCollection<T> Paged<T>(
+        public static DataCollection<T> Paged<T>
+            (
                this IQueryable<T> query,
                int page,
                int take

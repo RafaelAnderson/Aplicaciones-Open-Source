@@ -66,9 +66,8 @@ namespace PointFood.Service.Impl
         {
             var entry = _context.Clients.Single(x => x.ClientId == id);
             entry.Name = model.Name;
-            entry.Dni = model.Dni;
+            entry.Phone = model.Phone;
             entry.Email = model.Email;
-            entry.Birthdate = model.Birthdate;
             entry.Username = model.Username;
             entry.Password = model.Password;
 
